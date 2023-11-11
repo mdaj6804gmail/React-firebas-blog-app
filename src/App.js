@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Container sx={{ color: "white" }}>
+      <Container sx={{ color: "white",mt:"5rem" }}>
         <RouterMaping />
       </Container>
     </div>

@@ -1,6 +1,7 @@
 import About from "../About/About";
 import BlogCreate from "../Blog-create-from/BlogCreate";
 import Blog from "../Blog/Blog";
+import SinglePageBlog from "../Blog/SinglePageBlog";
 import Home from "../Home/Home";
 import EditeProfile from "../Profile/EditeProfile";
 import Profile from "../Profile/Profile";
@@ -44,11 +45,19 @@ const settings = [
 ];
 
 const routersComponentants = [
+  //! Public routes
   { path: RoutePath.home, element: <Home />, roule: Roules.public },
   { path: RoutePath.blog, element: <Blog />, roule: Roules.public },
   { path: RoutePath.contact, element: <Contact />, roule: Roules.public },
   { path: RoutePath.about, element: <About />, roule: Roules.public },
   { path: RoutePath.login, element: <Login />, roule: Roules.public },
+  {
+    path: `${RoutePath.blog}/:id`,
+    element: <SinglePageBlog />,
+    roule: Roules.public,
+  },
+
+  //! Private routes
   { path: RoutePath.profile, element: <Profile />, roule: Roules.private },
   {
     path: RoutePath.profileEdit,

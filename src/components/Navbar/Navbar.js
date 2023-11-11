@@ -10,7 +10,7 @@ import SsMenu from "./SsMenu";
 
 function Navbar() {
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#ab47bc" }}>
+    <AppBar position="fixed"  sx={{ backgroundColor: "#ab47bc",top:"0",left:"0" }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>

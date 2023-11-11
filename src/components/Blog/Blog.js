@@ -1,12 +1,14 @@
 import React from "react";
-
+import { BlogData } from "../assets/data";
+import SingleBlog from "./SingleBlog";
+import {Box} from "@mui/material";
 const Blog = () => {
   return (
-    <div>
-      <h1>
-        I'm a Blog Page
-      </h1>
-    </div>
+    <Box sx={{display:"flex",flexWrap:"wrap",justifyContent:"center",gap:"5px"}}>
+      {BlogData.map((x) => (
+        <SingleBlog key={x.id} data={x} />
+      ))}
+    </Box>
   );
 };
 

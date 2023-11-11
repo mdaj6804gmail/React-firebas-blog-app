@@ -8,9 +8,7 @@ const NavItem = ({ pages }) => {
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
-    console.log("handleCloseNavMenu");
   };
-
   return pages.map((page) => (
     <NavLink to={page.link} onClick={handleCloseNavMenu} key={page.title}>
       <Button key={page} sx={{ my: 2, color: "white", display: "block" }}>
