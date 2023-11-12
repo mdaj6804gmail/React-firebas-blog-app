@@ -6,18 +6,17 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import imageC from "../assets/image/Profile_image.png";
 import { Link } from "react-router-dom";
 
 const SingleBlog = ({ data }) => {
   return (
     <Link to={`../blog/${data.id}`}>
-      <Card sx={{ maxWidth: 345 }}>
+      <Card sx={{ maxWidth: 345, height: "100%" }}>
         <CardActionArea>
           <CardMedia
             component="img"
             height="140"
-            image={imageC}
+            image={data.photo}
             alt="green iguana"
           />
           <CardContent>
